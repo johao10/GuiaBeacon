@@ -7,11 +7,15 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@style/AppTheme.NoActionBar"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Laboratorios"></activity>
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".Ambrobotica"></activity>
+        <activity android:name=".Ambquimica" />
+        <activity android:name=".Ambfisica" />
+        <activity android:name=".Ambsistemas" />
+        <activity android:name=".Laboratorios" />
         <activity
             android:name=".Laboratorio207"
             android:label="@string/title_activity_laboratorio207"
@@ -26,7 +30,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PanelActivity"
-            android:label="@string/title_activity_panel"
+            android:label="@style/AppTheme.NoActionBar"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
