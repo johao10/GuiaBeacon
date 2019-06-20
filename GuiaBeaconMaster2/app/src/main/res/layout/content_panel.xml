@@ -59,8 +59,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="45dp"
+                    android:layout_width="80dp"
+                    android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/universidad" />
 
@@ -69,10 +69,11 @@
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
-                    android:text="Universidad"
+                    android:text="Oscio"
                     android:textAlignment="center"
-                    android:textColor="@color/colorVerdeAbeto"
-                    android:textSize="10sp"
+                    android:background="@color/colorGranada"
+                    android:textColor="@color/colorBlanco"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -100,20 +101,21 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="45dp"
+                    android:layout_width="80dp"
+                    android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/aulas" />
+                    android:src="@drawable/lab" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
-                    android:text="Aulas Estudio"
+                    android:text="Laboratorios"
                     android:textAlignment="center"
-                    android:textColor="@color/colorVerdeAbeto"
-                    android:textSize="10sp"
+                    android:textColor="@color/colorBlanco"
+                    android:background="@color/colorGranada"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -140,20 +142,22 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="45dp"
+                    android:layout_width="80dp"
+                    android:layout_height="75dp"
+                    android:scaleType="fitCenter"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/lab" />
+                    android:src="@drawable/servicouni" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
-                    android:text="Laboratorios"
+                    android:text="Actividades"
                     android:textAlignment="center"
-                    android:textColor="@color/colorVerdeAbeto"
-                    android:textSize="10sp"
+                    android:background="@color/colorGranada"
+                    android:textColor="@color/colorBlanco"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -181,8 +185,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="45dp"
+                    android:layout_width="80dp"
+                    android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/salestu" />
 
@@ -190,19 +194,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
-                    android:text="Sala De Estudio"
+                    android:text="Otros"
                     android:textAlignment="center"
-                    android:textColor="@color/colorVerdeAbeto"
-                    android:textSize="10sp"
+                    android:background="@color/colorGranada"
+                    android:textColor="@color/colorBlanco"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
 
-
-
     </android.support.v7.widget.GridLayout>
-
 
 </RelativeLayout>
