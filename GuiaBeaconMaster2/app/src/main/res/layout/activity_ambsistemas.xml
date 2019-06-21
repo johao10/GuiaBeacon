@@ -37,7 +37,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/edtid"
+                    android:id="@+id/edtHorario"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:hint="ID"
@@ -258,6 +258,30 @@
                     android:text="Imagenes Ambiente"
                     android:textColor="@color/colorVerdeAbeto"
                     android:textSize="10sp" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="258dp"
+                android:layout_height="195dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imagenesId"
+                    android:layout_width="282dp"
+                    android:layout_height="217dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/labc"
+                    android:scaleType="fitCenter" />
+
 
             </LinearLayout>
 
