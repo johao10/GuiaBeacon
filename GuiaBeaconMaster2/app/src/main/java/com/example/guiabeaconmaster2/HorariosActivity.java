@@ -18,6 +18,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -34,6 +35,7 @@ import org.altbeacon.beacon.Identifier;
 import org.altbeacon.beacon.RangeNotifier;
 import org.altbeacon.beacon.Region;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -41,13 +43,20 @@ import java.util.Collection;
 
 public class HorariosActivity extends AppCompatActivity implements View.OnClickListener, BeaconConsumer,
         RangeNotifier{
+
+
+    EditText txtid,txtcod,txtnom,txtini,txtfin;
+    Button btnbuscar;
+
     protected final String TAG = HorariosActivity.this.getClass().getSimpleName();;
     private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
     private static final int REQUEST_ENABLE_BLUETOOTH = 1;
     private static final long DEFAULT_SCAN_PERIOD_MS = 12000;
     private static final String ALL_BEACONS_REGION = "AllBeaconsRegion";
     RequestQueue rq;
+
     RequestQueue jrq;
+
     // Para interactuar con los beacons desde una actividad
     private BeaconManager mBeaconManager;
     Identifier cajaUser;
@@ -57,7 +66,14 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_horarios2);
+        setContentView(R.layout.activity_horarios);
+
+        txtid= findViewById(R.id.edtid);
+        txtcod= findViewById(R.id.edtCodbeacon);
+        txtnom= findViewById(R.id.edtNombreBeacon);
+        txtini= findViewById(R.id.edtFechainicio);
+        txtfin= findViewById(R.id.edtFechafin);
+        btnbuscar= findViewById(R.id.btnConsultar);
 
         getStartButton().setOnClickListener(this);
         getStopButton().setOnClickListener(this);
@@ -73,13 +89,7 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
         mRegion = new Region(ALL_BEACONS_REGION, identifiers);
 
         Button btnBuscar = (Button) findViewById(R.id.startReadingBeaconsButton);
-/*
-        btnBuscar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });*/
     }
 
     @Override
@@ -201,25 +211,26 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
             showToastMessage(getString(R.string.no_beacons_detected));
         }
         for (Beacon beacon : beacons) {
-              showToastMessage(getString(R.string.beacon_detected2, beacon.getId1()));
-              String guuid = String.valueOf(beacon.getId1());
-              buscarBeacon(guuid);
+            String guuid = String.valueOf(beacon.getId1());
+            String gid = String.valueOf(beacon.getId3());
+            int id = Integer.valueOf(gid);
+            showToastMessage(getString(R.string.beacon_detected2, beacon.getId1()));
+            buscarBeacon(guuid,id);
         }
     }
 
-
-    private void buscarBeacon(String guuid){
+    private void buscarBeacon(final String guuid,final int id){
         String url="http://192.168.1.129/DBeacons/identificar.php?beacon="+guuid;
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
                 JSONObject jsonObject = null;
-
-                    Intent intencion = new Intent(getApplicationContext(), Laboratorio206.class);
-                    startActivity(intencion);
-
-                Toast.makeText(getApplicationContext(),"Conexión Exitosa",Toast.LENGTH_SHORT).show();
-
+                    //Intent intencion = new Intent(getApplicationContext(), Laboratorio206.class);
+                    //startActivity(intencion);
+                    Toast.makeText(getApplicationContext(), "Conexión Exitosa", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), guuid, Toast.LENGTH_SHORT).show();
+                    txtcod.setText((guuid));
+                    txtid.setText(String.valueOf(id+1));
             }
         }, new Response.ErrorListener() {
             @Override

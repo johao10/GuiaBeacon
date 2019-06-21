@@ -13,7 +13,7 @@
     <string name="no_bluetooth_msg">Con el bluetooth desactivado no es posible buscar beacons</string>
     <string name="start_looking_for_beacons">Empezando a buscar beacons</string>
     <string name="no_beacons_detected">No se han encontrado beacons</string>
-    <string name="beacon_detected2">Laboratorio %1$s!!</string>
+    <string name="beacon_detected2">Laboratorio%1$s!!</string>
     <string name="beacon_detected9">errorororor%1$s!!</string>
     <string name="beacon_detected10">aceptaciiin%1$s!!</string>
     <string name="beacon_detected4">MOSTRANDO %1$s!!</string>

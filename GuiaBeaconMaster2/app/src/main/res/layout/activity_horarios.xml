@@ -1,52 +1,303 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HorariosActivity">
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@color/colorBlanco"
+    tools:context=".Ambsistemas">
 
-    <android.support.design.widget.AppBarLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:orientation="vertical">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <ImageView
+            android:id="@+id/imagenId"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
+            android:layout_height="169dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/campus" />
 
 
-    <Button
-        android:id="@+id/stopReadingBeaconsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="81dp"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:background="@drawable/ic_gps_off_black_24dp"
-        app:backgroundTint="@color/black"
-        app:srcCompat="@drawable/ic_gps_off_black_24dp"
-        tools:ignore="VectorDrawableCompat" />
+        <LinearLayout
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/startReadingBeaconsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="81dp"
-        android:layout_gravity="bottom|start"
-        android:layout_margin="@dimen/fab_margin"
-        android:background="@drawable/ic_gps_fixed_black_24dp"
-        app:backgroundTint="@android:color/holo_green_dark"
-        app:srcCompat="@drawable/ic_gps_fixed_black_24dp"
-        tools:ignore="VectorDrawableCompat" />
+            <EditText
+                android:id="@+id/edtid"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:hint="ID"
+                android:textColor="@color/colorCeleste" />
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/escenariohorario"
-        android:layout_width="match_parent"
-        android:layout_height="334dp"
-        android:layout_marginTop="55dp" />
+            <Button
+                android:id="@+id/btnConsultar"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:text="ID" />
 
-</android.support.design.widget.CoordinatorLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="Area"
+                android:textColor="@color/colorVerdeAbeto"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/edtNombarea"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorCeleste"
+                android:textColorLink="@color/colorFondo"
+                android:textIsSelectable="false"
+                android:textSize="10sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripcion"
+                android:textColor="@color/colorVerdeAbeto"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/edtDescriparea"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorCeleste"
+                android:textColorLink="@color/colorFondo"
+                android:textIsSelectable="false"
+                android:textSize="10sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="Estado"
+                android:textColor="@color/colorVerdeAbeto"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/edtEstado"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:selectAllOnFocus="false"
+                android:textColor="@color/colorCeleste"
+                android:textSize="10sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="Codigo Beacon"
+                android:textColor="@color/colorVerdeAbeto"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/edtCodbeacon"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorCeleste"
+                android:textIsSelectable="false"
+                android:textSize="10sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:text="Nombre Beacon"
+                android:textColor="@color/colorVerdeAbeto"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/edtNombreBeacon"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorCeleste"
+                android:textColorLink="@color/colorFondo"
+                android:textIsSelectable="false"
+                android:textSize="10sp"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="Fecha inicio"
+                android:textColor="@color/colorVerdeAbeto"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/edtFechainicio"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorCeleste"
+                android:textColorLink="@color/colorFondo"
+                android:textIsSelectable="false"
+                android:textSize="10sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:text="Fecha fin"
+                android:textColor="@color/colorVerdeAbeto"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/edtFechafin"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorCeleste"
+                android:textColorLink="@color/colorFondo"
+                android:textIsSelectable="false"
+                android:textSize="10sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text="Nombre Ambiente"
+                android:textColor="@color/colorVerdeAbeto"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/edtNombambiente"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorCeleste"
+                android:textColorLink="@color/colorFondo"
+                android:textIsSelectable="false"
+                android:textSize="10sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripcion"
+                android:textColor="@color/colorVerdeAbeto"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/edtDescripamb"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorCeleste"
+                android:textColorLink="@color/colorFondo"
+                android:textIsSelectable="false"
+                android:textSize="10sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Imagenes Ambiente"
+                android:textColor="@color/colorVerdeAbeto"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/startReadingBeaconsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/ic_gps_fixed_black_24dp"
+                app:backgroundTint="@android:color/holo_green_dark"
+                app:srcCompat="@drawable/ic_gps_fixed_black_24dp"
+                tools:ignore="VectorDrawableCompat" />
+
+            <Button
+                android:id="@+id/stopReadingBeaconsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/ic_gps_off_black_24dp"
+                app:backgroundTint="@color/black"
+                app:srcCompat="@drawable/ic_gps_off_black_24dp"
+                tools:ignore="VectorDrawableCompat" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</RelativeLayout>
+

@@ -40,12 +40,10 @@ public class Ambsistemas extends AppCompatActivity {
         btnbuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                buscar("http://192.168.1.129/DBeacons/buscar.php?id_horario="+txtid.getText()+"");
+                buscar("http://192.168.1.58/DBeacons/buscar.php?id_horario="+txtid.getText()+"");
             }
         });
-
     }
-
     private void buscar(String url){
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
@@ -59,8 +57,6 @@ public class Ambsistemas extends AppCompatActivity {
                         txtnom.setText(jsonObject.getString("nombre_beacon"));
                         txtini.setText(jsonObject.getString("fecha_inicio"));
                         txtfin.setText(jsonObject.getString("fecha_fin"));
-
-
                     } catch (JSONException e) {
                         Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
 
