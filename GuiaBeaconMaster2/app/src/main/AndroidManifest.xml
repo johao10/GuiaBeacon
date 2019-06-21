@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Ambrobotica"></activity>
+        <activity android:name=".Registrar" />
+        <activity android:name=".Ambrobotica" />
         <activity android:name=".Ambquimica" />
         <activity android:name=".Ambfisica" />
         <activity android:name=".Ambsistemas" />
@@ -32,7 +33,7 @@
             android:name=".PanelActivity"
             android:label="@style/AppTheme.NoActionBar"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
