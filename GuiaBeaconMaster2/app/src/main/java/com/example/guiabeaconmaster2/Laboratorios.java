@@ -46,7 +46,7 @@ public class Laboratorios extends AppCompatActivity {
         rob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 = new Intent(Laboratorios.this,Ambrobotica.class);
+                Intent int1 = new Intent(Laboratorios.this,HorariosActivity.class);
                 Laboratorios.this.startActivity(int1);
             }
         });

@@ -62,14 +62,14 @@
                     android:layout_width="80dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/universidad" />
+                    android:src="@drawable/lab" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
-                    android:text="Oscio"
+                    android:text="Laboratorios"
                     android:textAlignment="center"
                     android:background="@color/colorGranada"
                     android:textColor="@color/colorBlanco"
@@ -104,14 +104,14 @@
                     android:layout_width="80dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/lab" />
+                    android:src="@drawable/cafetin" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
-                    android:text="Laboratorios"
+                    android:text="Entretenimiento"
                     android:textAlignment="center"
                     android:textColor="@color/colorBlanco"
                     android:background="@color/colorGranada"
