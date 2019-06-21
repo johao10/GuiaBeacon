@@ -37,7 +37,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/edtHorario"
+                    android:id="@+id/edtid"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:hint="ID"
