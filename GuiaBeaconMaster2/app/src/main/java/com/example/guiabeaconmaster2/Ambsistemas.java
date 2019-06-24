@@ -29,7 +29,6 @@ public class Ambsistemas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ambsistemas);
 
-        txtid= findViewById(R.id.edtid);
         txtcod= findViewById(R.id.edtCodbeacon);
         txtnom= findViewById(R.id.edtNombreBeacon);
         txtini= findViewById(R.id.edtFechainicio);

@@ -17,8 +17,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -35,18 +37,23 @@ import org.altbeacon.beacon.Identifier;
 import org.altbeacon.beacon.RangeNotifier;
 import org.altbeacon.beacon.Region;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
+import com.loopj.android.http.*;
+
+import cz.msebera.android.httpclient.Header;
+
+
 public class HorariosActivity extends AppCompatActivity implements View.OnClickListener, BeaconConsumer,
         RangeNotifier{
 
-
-    EditText txtid,txtcod,txtnom,txtini,txtfin;
+    private AsyncHttpClient horario;
+    EditText txtcod,txtnombre;
     Button btnbuscar;
+    ListView lvDatos;
 
     protected final String TAG = HorariosActivity.this.getClass().getSimpleName();;
     private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
@@ -68,12 +75,20 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horarios);
 
-        txtid= findViewById(R.id.edtid);
+        horario = new AsyncHttpClient();
+
         txtcod= findViewById(R.id.edtCodbeacon);
-        txtnom= findViewById(R.id.edtNombreBeacon);
-        txtini= findViewById(R.id.edtFechainicio);
-        txtfin= findViewById(R.id.edtFechafin);
+        txtnombre= findViewById(R.id.edtnombre);
         btnbuscar= findViewById(R.id.btnConsultar);
+        lvDatos= findViewById(R.id.lvDatos);
+
+        btnbuscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ObtenerDatos();
+            }
+        });
+
 
         getStartButton().setOnClickListener(this);
         getStopButton().setOnClickListener(this);
@@ -88,7 +103,7 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
 
         mRegion = new Region(ALL_BEACONS_REGION, identifiers);
 
-        Button btnBuscar = (Button) findViewById(R.id.startReadingBeaconsButton);
+        //Button btnBuscar = (Button) findViewById(R.id.startReadingBeaconsButton);
 
     }
 
@@ -211,17 +226,17 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
             showToastMessage(getString(R.string.no_beacons_detected));
         }
         for (Beacon beacon : beacons) {
-            String guuid = String.valueOf(beacon.getId1());
-            String gid = String.valueOf(beacon.getId3());
-            int id = Integer.valueOf(gid);
+
             showToastMessage(getString(R.string.beacon_detected2, beacon.getId1()));
-            buscarBeacon(guuid,id);
+            String guuid = String.valueOf(beacon.getId1());
+            String guuid2 = String.valueOf(beacon.getId2());
+            buscarBeacon(guuid,guuid2);
         }
     }
 
 
-    private void buscarBeacon(final String guuid,final int id){
-        String url="http://192.168.43.198/DBeacons/identificar.php?beacon="+guuid;
+    private void buscarBeacon(final String guuid,final String guuid2){
+        String url="http://192.168.1.129/DBeacons/identificar.php?beacon="+guuid;
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -229,9 +244,8 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
                     //Intent intencion = new Intent(getApplicationContext(), Laboratorio206.class);
                     //startActivity(intencion);
                     Toast.makeText(getApplicationContext(), "Conexión Exitosa", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getApplicationContext(), guuid, Toast.LENGTH_SHORT).show();
                     txtcod.setText((guuid));
-                    txtid.setText(String.valueOf(id+1));
+                    txtnombre.setText((guuid2));
             }
         }, new Response.ErrorListener() {
             @Override
@@ -242,6 +256,44 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
 
         rq = Volley.newRequestQueue(this);
         rq.add(jsonArrayRequest);
+    }
+
+    private void ObtenerDatos(){
+        String url="http://192.168.1.129/DBeacons/buscar.php?nombre_beacon="+txtnombre.getText();
+        horario.post(url, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+
+                if(statusCode == 200){
+                    listar(new String (responseBody));
+                }
+
+            }
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+
+            }
+        });
+    }
+
+    private void listar(String respuesta){
+        ArrayList<Horario> lista = new ArrayList<>();
+        try{
+            JSONArray jsonarreglo = new JSONArray(respuesta);
+            for(int i=0;i<jsonarreglo.length();i++){
+                Horario h = new Horario();
+                h.setId_horario(jsonarreglo.getJSONObject(i).getInt("id_horario"));
+                h.setCod_beacon(jsonarreglo.getJSONObject(i).getString("cod_beacon"));
+                h.setNombre_beacon(jsonarreglo.getJSONObject(i).getString("nombre_beacon"));
+                h.setFecha_inicio(jsonarreglo.getJSONObject(i).getString("fecha_inicio"));
+                h.setFecha_fin(jsonarreglo.getJSONObject(i).getString("fecha_fin"));
+                lista.add(h);
+            }
+            ArrayAdapter<Horario> a = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,lista);
+            lvDatos.setAdapter(a);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
 

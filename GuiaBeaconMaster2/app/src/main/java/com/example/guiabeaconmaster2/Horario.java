@@ -5,8 +5,18 @@ import java.sql.Date;
 public class Horario {
     private int id_horario;
     private String cod_beacon,nombre_beacon;
-    private Date fecha_inicio;
-    private Date fecha_fin;
+    private String fecha_inicio;
+    private String fecha_fin;
+
+    public Horario(){}
+
+    public Horario(int id_horario, String cod_beacon, String nombre_beacon, String fecha_inicio, String fecha_fin) {
+        this.id_horario = id_horario;
+        this.cod_beacon = cod_beacon;
+        this.nombre_beacon = nombre_beacon;
+        this.fecha_inicio = fecha_inicio;
+        this.fecha_fin = fecha_fin;
+    }
 
     public String getNombre_beacon() {
         return nombre_beacon;
@@ -32,19 +42,29 @@ public class Horario {
         this.cod_beacon = cod_beacon;
     }
 
-    public Date getFecha_inicio() {
+    public String getFecha_inicio() {
         return fecha_inicio;
     }
 
-    public void setFecha_inicio(Date fecha_inicio) {
+    public void setFecha_inicio(String fecha_inicio) {
         this.fecha_inicio = fecha_inicio;
     }
 
-    public Date getFecha_fin() {
+    public String getFecha_fin() {
         return fecha_fin;
     }
 
-    public void setFecha_fin(Date fecha_fin) {
+    public void setFecha_fin(String fecha_fin) {
         this.fecha_fin = fecha_fin;
+    }
+
+    /*@Override
+    public String toString() {
+        return nombre_beacon;
+    }*/
+
+    @Override
+    public String toString() {
+        return  id_horario + "|"+ fecha_inicio + "|"+ fecha_fin;
     }
 }
