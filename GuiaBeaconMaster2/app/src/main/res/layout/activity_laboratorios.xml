@@ -40,77 +40,77 @@
     </LinearLayout>
 
     <android.support.v7.widget.GridLayout
-    android:id="@+id/idGridlabo4"
-    android:layout_width="406dp"
-    android:layout_height="42dp"
-    android:layout_marginTop="275dp"
-    android:background="@drawable/button_color"
-    android:padding="1dp"
-    app:columnCount="1"
-    app:rowCount="3">
+        android:id="@+id/idGridlabo4"
+        android:layout_width="406dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="275dp"
+        android:background="@drawable/button_color"
+        android:padding="1dp"
+        app:columnCount="1"
+        app:rowCount="3">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardLabosistemas"
-        android:layout_width="380dp"
-        android:layout_height="29dp"
-        app:cardBackgroundColor="#00FFFFFF"
-        app:layout_columnWeight="1"
-        app:layout_rowWeight="1">
-
-        <LinearLayout
-            android:layout_width="320dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardLabosistemas"
+            android:layout_width="380dp"
+            android:layout_height="29dp"
+            app:cardBackgroundColor="#00FFFFFF"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
 
             <LinearLayout
-                android:layout_width="47dp"
-                android:layout_height="37dp"
-                android:layout_gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/labsistemas" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_width="320dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
-                <TextView
+                <LinearLayout
+                    android:layout_width="47dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/labsistemas" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:paddingLeft="10dp"
-                    android:text="Laboratorio Sistemas"
-                    android:textColor="@color/colorNegro"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:text="Laboratorio Sistemas"
+                        android:textColor="@color/colorNegro"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/sigui" />
+                </LinearLayout>
             </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="50dp"
-                android:layout_height="44dp"
-                android:layout_gravity="center"
-                android:orientation="vertical"
-                android:paddingLeft="10dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/sigui" />
-            </LinearLayout>
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-</android.support.v7.widget.GridLayout>
+        </android.support.v7.widget.CardView>
+    </android.support.v7.widget.GridLayout>
 
     <android.support.v7.widget.GridLayout
         android:id="@+id/idGridlabofisica"
@@ -187,78 +187,78 @@
     </android.support.v7.widget.GridLayout>
 
     <android.support.v7.widget.GridLayout
-    android:id="@+id/idGridlaboquimica"
-    android:layout_width="406dp"
-    android:layout_height="42dp"
-    android:layout_marginTop="365dp"
-    android:background="@drawable/button_color"
-    android:padding="1dp"
-    app:columnCount="1"
-    app:rowCount="3">
+        android:id="@+id/idGridlaboquimica"
+        android:layout_width="406dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="365dp"
+        android:background="@drawable/button_color"
+        android:padding="1dp"
+        app:columnCount="1"
+        app:rowCount="3">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardLaboquimica"
-        android:layout_width="380dp"
-        android:layout_height="29dp"
-        app:cardBackgroundColor="#00FFFFFF"
-        app:layout_columnWeight="1"
-        app:layout_rowWeight="1">
-
-        <LinearLayout
-            android:layout_width="320dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardLaboquimica"
+            android:layout_width="380dp"
+            android:layout_height="29dp"
+            app:cardBackgroundColor="#00FFFFFF"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
 
             <LinearLayout
-                android:layout_width="47dp"
-                android:layout_height="37dp"
-                android:layout_gravity="center"
-                android:orientation="vertical"
-                >
-
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitEnd"
-                    android:src="@drawable/labquimica" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_width="320dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
-                <TextView
+                <LinearLayout
+                    android:layout_width="47dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/labquimica" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:paddingLeft="10dp"
-                    android:text="Laboratorio Quimica"
-                    android:textColor="@color/colorNegro"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:text="Laboratorio Quimica"
+                        android:textColor="@color/colorNegro"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/sigui" />
+                </LinearLayout>
             </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="50dp"
-                android:layout_height="44dp"
-                android:layout_gravity="center"
-                android:orientation="vertical"
-                android:paddingLeft="10dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/sigui" />
-            </LinearLayout>
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-</android.support.v7.widget.GridLayout>
+        </android.support.v7.widget.CardView>
+    </android.support.v7.widget.GridLayout>
 
     <android.support.v7.widget.GridLayout
         android:id="@+id/idGridlaboarquitec"
