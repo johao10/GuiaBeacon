@@ -40,7 +40,7 @@ public class Ambsistemas extends AppCompatActivity {
         btnbuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                buscar("http://192.168.1.58/DBeacons/buscar.php?id_horario="+txtid.getText()+"");
+                buscar("http://192.168.43.198/DBeacons/buscar.php?id_horario="+txtid.getText()+"");
             }
         });
     }

@@ -219,8 +219,9 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
+
     private void buscarBeacon(final String guuid,final int id){
-        String url="http://192.168.1.129/DBeacons/identificar.php?beacon="+guuid;
+        String url="http://192.168.43.198/DBeacons/identificar.php?beacon="+guuid;
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {

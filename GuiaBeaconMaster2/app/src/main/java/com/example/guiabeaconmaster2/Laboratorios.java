@@ -30,7 +30,7 @@ public class Laboratorios extends AppCompatActivity {
         fis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 = new Intent(Laboratorios.this,Ambfisica.class);
+                Intent int1 = new Intent(Laboratorios.this,HorariosActivity.class);
                 Laboratorios.this.startActivity(int1);
             }
         });

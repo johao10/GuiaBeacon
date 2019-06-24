@@ -97,7 +97,7 @@ public class LoginFragment extends Fragment implements Response.Listener<JSONObj
                 .commit();
     }
     private void iniciarSesion(){
-        String url="http://192.168.1.129/DBeacons/sesion.php?user="+cajaUser.getText().toString()+
+        String url="http://192.168.43.198/DBeacons/sesion.php?user="+cajaUser.getText().toString()+
                 "&pwd="+cajaPwd.getText().toString();
         jrq= new JsonObjectRequest(Request.Method.GET, url,null,this,this);
         rq.add(jrq);
