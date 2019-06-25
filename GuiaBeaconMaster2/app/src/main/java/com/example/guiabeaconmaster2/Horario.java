@@ -14,6 +14,16 @@ public class Horario {
     private String nombre_curso;
     //tbl_docente
     private String nombre_docente;
+    //tbl_ambiente
+    private String imagen;
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
 
     public Horario(){}
 

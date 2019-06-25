@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -54,6 +55,7 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
     EditText txtcod,txtnombre;
     Button btnbuscar;
     ListView lvDatos;
+    ImageView imagen;
 
     protected final String TAG = HorariosActivity.this.getClass().getSimpleName();;
     private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
@@ -81,6 +83,7 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
         txtnombre= findViewById(R.id.edtnombre);
         btnbuscar= findViewById(R.id.btnConsultar);
         lvDatos= findViewById(R.id.lvDatos);
+        imagen= findViewById(R.id.image);
 
         btnbuscar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -232,6 +235,11 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
+    private void buscarimagen(){
+
+
+    }
+
 
     private void buscarBeacon(final String guuid,final String guuid2){
         String url="http://192.168.1.129/DBeacons/identificar.php?beacon="+guuid;
@@ -284,6 +292,7 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
                 h.setHora_fin(jsonarreglo.getJSONObject(i).getString("hora_fin"));
                 h.setNombre_curso(jsonarreglo.getJSONObject(i).getString("nombre_curso"));
                 h.setNombre_docente(jsonarreglo.getJSONObject(i).getString("nombre_docente"));
+                h.setImagen(jsonarreglo.getJSONObject(i).getString("imagen_amb"));
                 lista.add(h);
             }
             ArrayAdapter<Horario> a = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,lista);

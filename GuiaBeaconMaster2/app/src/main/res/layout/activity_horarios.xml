@@ -45,7 +45,7 @@
                     android:id="@+id/edtnombre"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorNegro"
+                    android:textColor="@color/white"
                     android:textSize="20dp" />
 
                 <Button
@@ -74,10 +74,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Codigo Beacon"
-                    android:textColor="@color/colorNegro"
+                    android:textColor="@color/white"
                     android:textSize="16dp" />
 
             </LinearLayout>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="150dp"
+        >
+    </ImageView>
+
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -21,9 +21,9 @@ public class PanelActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panel);
 
-        CardView osc = (CardView) findViewById(R.id.cardOcio);
+        CardView osc = (CardView) findViewById(R.id.cardLab);
         CardView act = (CardView) findViewById(R.id.cardActividades);
-        CardView labo = (CardView) findViewById(R.id.cardLabor);
+        CardView labo = (CardView) findViewById(R.id.cardOscio);
         CardView otro = (CardView) findViewById(R.id.cardOtros);
 
 
