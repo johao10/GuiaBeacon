@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:src="@drawable/fondofinal"
-    android:scaleType="centerCrop"
-    android:background="@color/colorNegro"
     tools:context="com.example.guiabeaconmaster2.Registrar">
 
-
-
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/font3"
+        android:scaleType="centerCrop"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="match_parent">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:gravity="center"
         android:text="Registro Alumno"
-        android:textColor="@android:color/background_light"
+        android:textColor="@color/colorNegro"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -33,22 +38,23 @@
         android:inputType="text"
         android:textColor="@android:color/background_light"
         android:textColorHighlight="@android:color/holo_blue_dark"
-        android:textColorHint="@android:color/background_light"
+        android:textColorHint="@color/colorNegro"
         android:textColorLink="@android:color/holo_blue_dark" />
 
-    <EditText
-        android:id="@+id/apellidoRegistro"
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:hint="Apellido"
-        android:singleLine="true"
-        android:inputType="text"
-        android:textColor="@android:color/background_light"
-        android:textColorHighlight="@android:color/holo_blue_dark"
-        android:textColorHint="@android:color/background_light"
-        android:textColorLink="@android:color/holo_blue_dark" />
+        <EditText
+            android:id="@+id/apellidoRegistro"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:hint="Apellido"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="@android:color/background_light"
+            android:textColorHighlight="@color/colorGranada"
+            android:textColorHint="@color/colorNegro"
+            android:textColorLink="@color/colorGranada"
+            android:textCursorDrawable="@color/colorGranada" />
 
     <EditText
         android:id="@+id/telefonoRegistro"
@@ -65,7 +71,7 @@
         android:singleLine="true"
         android:textColor="@android:color/background_light"
         android:textColorHighlight="@android:color/holo_blue_dark"
-        android:textColorHint="@android:color/background_light"
+        android:textColorHint="@color/colorNegro"
         android:textColorLink="@android:color/holo_blue_dark" />
 
     <EditText
@@ -81,35 +87,37 @@
         android:drawableLeft="@drawable/ic_mail"
         android:textColor="@android:color/background_light"
         android:textColorHighlight="@android:color/holo_blue_dark"
-        android:textColorHint="@android:color/background_light"
+        android:textColorHint="@color/colorNegro"
         android:textColorLink="@android:color/holo_blue_dark" />
 
-    <EditText
-        android:id="@+id/passwordRegistro"
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:hint="Password"
-        android:singleLine="true"
-        android:drawablePadding="10dp"
-        android:drawableLeft="@drawable/ic_pass"
-        android:inputType="textPassword"
-        android:textColor="@android:color/background_light"
-        android:textColorHighlight="@android:color/holo_blue_dark"
-        android:textColorHint="@android:color/background_light"
-        android:textColorLink="@android:color/holo_blue_dark" />
+        <EditText
+            android:id="@+id/passwordRegistro"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_pass"
+            android:drawablePadding="10dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@android:color/background_light"
+            android:textColorHighlight="@android:color/holo_blue_dark"
+            android:textColorHint="@color/colorNegro"
+            android:textColorLink="@color/colorGranada" />
 
-    <Button
-        android:id="@+id/btnRegistro"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/button_inicio"
-        android:text="Registrar"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_light"
-        android:textSize="18sp" />
-
-</LinearLayout>
+        <Button
+            android:id="@+id/btnRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/fondo"
+            android:elevation="5dp"
+            android:textStyle="bold"
+            android:text="Registrar"
+            android:textColor="@drawable/txt_color"
+            android:textSize="16sp" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

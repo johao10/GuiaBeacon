@@ -10,14 +10,14 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/fondofinal"
+        android:src="@drawable/font3"
         android:scaleType="centerCrop"
         />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:background="#d8000000"
+
         android:gravity="center"
         android:layout_height="match_parent">
 
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
-            android:src="@drawable/logoutpfinal"
+            android:src="@drawable/utp2"
             />
 
         <EditText
@@ -35,17 +35,17 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="15dp"
-            android:background="@drawable/input"
+            android:background="@drawable/button_inicio"
+            android:drawableLeft="@drawable/ic_mail"
             android:drawablePadding="10dp"
             android:hint="Correo electrónico"
-            android:drawableLeft="@drawable/ic_mail"
             android:inputType="textEmailAddress"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
-            android:textColor="#fff"
-            android:textColorHint="#ccc" />
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorNegro" />
 
         <EditText
             android:id="@+id/txtPwd"
@@ -54,26 +54,28 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/input"
+            android:background="@drawable/button_inicio"
+            android:drawableLeft="@drawable/ic_pass"
             android:drawablePadding="10dp"
             android:hint="Contraseña"
             android:inputType="textPassword"
-            android:drawableLeft="@drawable/ic_pass"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
-            android:textColor="#fff"
-            android:textColorHint="#ccc" />
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorNegro" />
+
         <TextView
+            android:id="@+id/restPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#fff"
-            android:gravity="end"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="25dp"
             android:layout_marginBottom="30dp"
-            android:text="¿Olvidaste tu contraseña?"/>
+            android:gravity="end"
+            android:text="¿Olvidaste tu contraseña?"
+            android:textColor="@color/colorNegro" />
 
         <Button
             android:id="@+id/btnSesion"
@@ -82,11 +84,13 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/button_inicio"
+            android:background="@drawable/fondo"
             android:elevation="5dp"
-            android:text="Inciar sesión"
-            android:textColor="#fff"
+            android:textStyle="bold"
+            android:text="Iniciar sesión"
+            android:textColor="@drawable/txt_color"
             android:textSize="16sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
@@ -99,9 +103,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="¿Aún no tienes cuenta?"
+                android:textColor="@color/colorNegro"
                 android:layout_marginLeft="10dp"
                 android:textSize="16sp"
-                android:textColor="#fff"
+
                 />
             <TextView
                 android:id="@+id/registroLogin"
@@ -109,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="Crear Cuenta"
-                android:textColor="#fff"
+                android:textColor="@color/colorNegro"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
