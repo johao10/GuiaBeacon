@@ -226,8 +226,6 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
             showToastMessage(getString(R.string.no_beacons_detected));
         }
         for (Beacon beacon : beacons) {
-
-            showToastMessage(getString(R.string.beacon_detected2, beacon.getId1()));
             String guuid = String.valueOf(beacon.getId1());
             String guuid2 = String.valueOf(beacon.getId2());
             buscarBeacon(guuid,guuid2);
@@ -241,8 +239,6 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onResponse(JSONArray response) {
                 JSONObject jsonObject = null;
-                    //Intent intencion = new Intent(getApplicationContext(), Laboratorio206.class);
-                    //startActivity(intencion);
                     Toast.makeText(getApplicationContext(), "Conexión Exitosa", Toast.LENGTH_SHORT).show();
                     txtcod.setText((guuid));
                     txtnombre.setText((guuid2));
@@ -265,7 +261,7 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
 
                 if(statusCode == 200){
-                    listar(new String (responseBody));
+                    listar2(new String (responseBody));
                 }
 
             }
@@ -275,8 +271,27 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
             }
         });
     }
+    private void listar2(String respuesta){
+        ArrayList<Horario2> lista = new ArrayList<>();
+        try{
+            JSONArray jsonarreglo = new JSONArray(respuesta);
+            for(int i=0;i<jsonarreglo.length();i++){
+                Horario2 h2 = new Horario2();
+                h2.setHora_ini(jsonarreglo.getJSONObject(i).getString("hora_ini"));
+                h2.setHora_fin(jsonarreglo.getJSONObject(i).getString("hora_fin"));
+                h2.setUbicacion(jsonarreglo.getJSONObject(i).getString("ubicacion"));
+                h2.setCurso(jsonarreglo.getJSONObject(i).getString("curso"));
+                h2.setDocente(jsonarreglo.getJSONObject(i).getString("docente"));
+                lista.add(h2);
+            }
+            ArrayAdapter<Horario2> a = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,lista);
+            lvDatos.setAdapter(a);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
 
-    private void listar(String respuesta){
+    /*private void listar(String respuesta){
         ArrayList<Horario> lista = new ArrayList<>();
         try{
             JSONArray jsonarreglo = new JSONArray(respuesta);
@@ -294,7 +309,7 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
         }catch(Exception e){
             e.printStackTrace();
         }
-    }
+    }*/
 
 
     private void stopDetectingBeacons() {

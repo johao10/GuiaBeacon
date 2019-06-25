@@ -3,8 +3,10 @@ package com.example.guiabeaconmaster2;
 import java.sql.Date;
 
 public class Horario {
+
     private int id_horario;
-    private String cod_beacon,nombre_beacon;
+    private String cod_beacon;
+    private String nombre_beacon;
     private String fecha_inicio;
     private String fecha_fin;
 
