@@ -14,19 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".Registrar" />
-        <activity android:name=".Ambrobotica" />
-        <activity android:name=".Ambquimica" />
-        <activity android:name=".Ambfisica" />
-        <activity android:name=".Ambsistemas" />
         <activity android:name=".Laboratorios" />
-        <activity
-            android:name=".Laboratorio207"
-            android:label="@string/title_activity_laboratorio207"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Laboratorio206"
-            android:label="@string/title_activity_prueba"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".HorariosActivity"
             android:label="@string/title_activity_horarios"

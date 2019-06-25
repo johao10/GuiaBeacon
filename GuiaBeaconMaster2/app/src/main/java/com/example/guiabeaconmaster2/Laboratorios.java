@@ -23,7 +23,7 @@ public class Laboratorios extends AppCompatActivity {
         sis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 = new Intent(Laboratorios.this,Ambsistemas.class);
+                Intent int1 = new Intent(Laboratorios.this,HorariosActivity.class);
                 Laboratorios.this.startActivity(int1);
             }
         });
@@ -38,7 +38,7 @@ public class Laboratorios extends AppCompatActivity {
         qui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 = new Intent(Laboratorios.this,Ambquimica.class);
+                Intent int1 = new Intent(Laboratorios.this,HorariosActivity.class);
                 Laboratorios.this.startActivity(int1);
             }
         });
