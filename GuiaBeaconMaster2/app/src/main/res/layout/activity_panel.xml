@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:background="@color/colorBlanco"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
@@ -20,9 +19,14 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/colorBlanco"
-        android:fitsSystemWindows="true"
+        android:background="@color/colorGranada"
+        android:scrollbarThumbHorizontal="@color/colorNegro"
+        android:scrollbarThumbVertical="@color/colorNegro"
         app:headerLayout="@layout/nav_header_panel"
+        app:insetForeground="@color/colorGranada"
+        app:itemBackground="@color/colorBlanco"
+        app:itemIconTint="@color/colorNegro"
+        app:itemTextColor="@color/colorNegro"
         app:menu="@menu/activity_panel_drawer" />
 
 </android.support.v4.widget.DrawerLayout>

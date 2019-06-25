@@ -25,8 +25,11 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        TextView mTextViewResetPasswors = (TextView)findViewById(R.id.restPassword);
         TextView registro = (TextView)findViewById(R.id.registroLogin);
         Button btnLogin = (Button)findViewById(R.id.btnSesion);
+
+
 
         final EditText usuarioT = (EditText)findViewById(R.id.txtUser);
         final EditText claveT = (EditText)findViewById(R.id.txtPwd);
@@ -39,6 +42,12 @@ public class Login extends AppCompatActivity {
                 //finish();
             }
 
+        });
+        mTextViewResetPasswors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Login.this,ResetPassword.class));
+            }
         });
 
 

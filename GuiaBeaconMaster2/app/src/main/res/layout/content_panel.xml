@@ -1,53 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/colorBlanco"
+    android:scrollbarThumbVertical="@color/colorGranada"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".PanelActivity"
     tools:showIn="@layout/app_bar_panel">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/idLayoutFondo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-70dp"
-        android:layout_marginLeft="-40dp"
-        android:layout_marginRight="-40dp">
+        android:layout_marginTop="-20dp">
 
         <ImageView
             android:id="@+id/imagenId"
             android:layout_width="wrap_content"
-            android:layout_height="300dp"
+            android:scaleType="fitCenter"
+            android:layout_height="200dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/campus" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
     <android.support.v7.widget.GridLayout
-        android:id="@+id/idGrid"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
+        android:id="@+id/idGridLab"
         android:layout_width="match_parent"
         android:layout_height="495dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="-60dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
         android:padding="4dp"
         app:columnCount="2"
-        app:rowCount="2">
+        app:rowCount="3">
 
         <android.support.v7.widget.CardView
-            android:id="@+id/cardOcio"
+            android:id="@+id/cardLab"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="10dp"
             android:foreground="?selectableItemBackground"
+            app:cardBackgroundColor="@color/colorBlanco"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fondo1"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="75dp"
+                    android:scaleType="fitEnd"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/lab" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/colorGranada"
+                    android:text="Laboratorios"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlanco"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardOscio"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:foreground="?selectableItemBackground"
+            app:cardBackgroundColor="@color/colorBlanco"
             app:cardCornerRadius="8dp"
             app:cardElevation="6dp"
             app:layout_columnWeight="1"
@@ -62,6 +112,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="75dp"
+                    android:scaleType="fitEnd"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/universidad" />
 
@@ -70,9 +121,9 @@
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
+                    android:background="@color/colorGranada"
                     android:text="Oscio"
                     android:textAlignment="center"
-                    android:background="@color/colorGranada"
                     android:textColor="@color/colorBlanco"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -80,7 +131,6 @@
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
-
 
         <android.support.v7.widget.CardView
             android:id="@+id/cardActividades"
@@ -90,6 +140,7 @@
             android:layout_marginRight="5dp"
             android:layout_marginBottom="10dp"
             android:foreground="?selectableItemBackground"
+            app:cardBackgroundColor="@color/colorBlanco"
             app:cardCornerRadius="8dp"
             app:cardElevation="6dp"
             app:layout_columnWeight="1"
@@ -105,48 +156,7 @@
                     android:layout_width="80dp"
                     android:layout_height="75dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/lab" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Laboratorios"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorBlanco"
-                    android:background="@color/colorGranada"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardLabor"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp"
-            android:foreground="?selectableItemBackground"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="6dp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="75dp"
-                    android:scaleType="fitCenter"
-                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitEnd"
                     android:src="@drawable/servicouni" />
 
                 <TextView
@@ -154,9 +164,9 @@
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
+                    android:background="@color/colorGranada"
                     android:text="Actividades"
                     android:textAlignment="center"
-                    android:background="@color/colorGranada"
                     android:textColor="@color/colorBlanco"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -174,6 +184,7 @@
             android:layout_marginRight="5dp"
             android:layout_marginBottom="10dp"
             android:foreground="?selectableItemBackground"
+            app:cardBackgroundColor="@color/colorBlanco"
             app:cardCornerRadius="8dp"
             app:cardElevation="6dp"
             app:layout_columnWeight="1"
@@ -182,12 +193,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/fondo1"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="75dp"
+                    android:scaleType="fitEnd"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/salestu" />
 
@@ -195,9 +208,94 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
+                    android:background="@color/colorGranada"
                     android:text="Otros"
                     android:textAlignment="center"
+                    android:textColor="@color/colorBlanco"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardCafetin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:foreground="?selectableItemBackground"
+            app:cardBackgroundColor="@color/colorBlanco"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fondo1"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="75dp"
+                    android:scaleType="fitEnd"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/cafetin" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
                     android:background="@color/colorGranada"
+                    android:text="Cafetin"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlanco"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardEstacionamiento"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:foreground="?selectableItemBackground"
+            app:cardBackgroundColor="@color/colorBlanco"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fondo1"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/estac" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/colorGranada"
+                    android:text="Estacionamiento"
+                    android:textAlignment="center"
                     android:textColor="@color/colorBlanco"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -208,4 +306,6 @@
 
     </android.support.v7.widget.GridLayout>
 
-</RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

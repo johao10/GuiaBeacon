@@ -1,29 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.example.guiabeaconmaster2">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@style/AppTheme.NoActionBar"
+        android:icon="@drawable/utp7"
+        android:label="CAMPUS UTP"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".ResetPassword" />
         <activity android:name=".Registrar" />
+        <activity android:name=".Ambrobotica" />
+        <activity android:name=".Ambquimica" />
+        <activity android:name=".Ambfisica" />
+        <activity android:name=".Ambsistemas" />
         <activity android:name=".Laboratorios" />
+        <activity
+            android:name=".Laboratorio207"
+            android:label="@string/title_activity_laboratorio207"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Laboratorio206"
+            android:label="@string/title_activity_prueba"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".HorariosActivity"
             android:label="@string/title_activity_horarios"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".PanelActivity"
-            android:label="@style/AppTheme.NoActionBar"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Campus Guia UTP"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".Login">
+        </activity>
+        <activity android:name=".interfaz.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
