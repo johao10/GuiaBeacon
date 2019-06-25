@@ -15,22 +15,22 @@ public class Laboratorios extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_laboratorios);
 
-        CardView sis = (CardView) findViewById(R.id.cardLabosistemas);
-        CardView fis = (CardView) findViewById(R.id.cardLabofisica);
-        CardView qui = (CardView) findViewById(R.id.cardLaboquimica);
-        CardView rob = (CardView) findViewById(R.id.cardLaborobotica);
+        CardView sis = (CardView) findViewById(R.id.cardLabosis);
+        CardView fis = (CardView) findViewById(R.id.cardLabofisi);
+        CardView qui = (CardView) findViewById(R.id.cardLaboquimi);
+        CardView rob = (CardView) findViewById(R.id.cardLaborobot);
 
         sis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 = new Intent(Laboratorios.this,HorariosActivity.class);
+                Intent int1 = new Intent(Laboratorios.this,Ambsistemas.class);
                 Laboratorios.this.startActivity(int1);
             }
         });
         fis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 = new Intent(Laboratorios.this,HorariosActivity.class);
+                Intent int1 = new Intent(Laboratorios.this,Ambfisica.class);
                 Laboratorios.this.startActivity(int1);
             }
         });
@@ -38,7 +38,7 @@ public class Laboratorios extends AppCompatActivity {
         qui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 = new Intent(Laboratorios.this,HorariosActivity.class);
+                Intent int1 = new Intent(Laboratorios.this,Ambquimica.class);
                 Laboratorios.this.startActivity(int1);
             }
         });
