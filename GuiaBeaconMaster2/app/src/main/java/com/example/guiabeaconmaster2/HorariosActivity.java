@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Rect;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.provider.Settings;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -43,6 +45,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import com.bumptech.glide.Glide;
+import com.github.snowdream.android.widget.SmartImageView;
 import com.loopj.android.http.*;
 
 import cz.msebera.android.httpclient.Header;
@@ -51,11 +55,12 @@ import cz.msebera.android.httpclient.Header;
 public class HorariosActivity extends AppCompatActivity implements View.OnClickListener, BeaconConsumer,
         RangeNotifier{
 
+    private Context mCtx;
     private AsyncHttpClient horario;
     EditText txtcod,txtnombre;
     Button btnbuscar;
     ListView lvDatos;
-    ImageView imagen;
+    SmartImageView imagen;
 
     protected final String TAG = HorariosActivity.this.getClass().getSimpleName();;
     private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
@@ -78,17 +83,16 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_horarios);
 
         horario = new AsyncHttpClient();
-
         txtcod= findViewById(R.id.edtCodbeacon);
         txtnombre= findViewById(R.id.edtnombre);
         btnbuscar= findViewById(R.id.btnConsultar);
         lvDatos= findViewById(R.id.lvDatos);
         imagen= findViewById(R.id.image);
-
         btnbuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ObtenerDatos();
+                buscarimagen();
             }
         });
 
@@ -237,6 +241,30 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
 
     private void buscarimagen(){
 
+        String url="http://192.168.1.129/DBeacons/buscar2.php?nombre_beacon="+txtnombre.getText();
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get(url, new AsyncHttpResponseHandler() {
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] response) {
+                if(statusCode == 200){
+                    try{
+                        JSONArray obj = new JSONArray(new String(response));
+                        String urlimage = obj.getJSONObject(0).getString("imagen_amb");
+                        Rect rect = new Rect(imagen.getLeft(),imagen.getTop(),imagen.getRight(),imagen.getBottom());
+                        imagen.setImageUrl(urlimage,rect);
+                        Toast.makeText(getApplicationContext(),"Imagen: "+ urlimage, Toast.LENGTH_LONG).show();
+                    }catch(Exception e){
+                        Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
+                // called when response HTTP status is "4XX" (eg. 401, 403, 404)
+            }
+
+        });
 
     }
 
