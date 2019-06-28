@@ -236,6 +236,7 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
             String guuid = String.valueOf(beacon.getId1());
             String guuid2 = String.valueOf(beacon.getId2());
             buscarBeacon(guuid,guuid2);
+
         }
     }
 
@@ -278,6 +279,8 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
                     Toast.makeText(getApplicationContext(), "Beacon encontrado", Toast.LENGTH_SHORT).show();
                     txtcod.setText((guuid));
                     txtnombre.setText((guuid2));
+                    ObtenerDatos();
+                    buscarimagen();
             }
         }, new Response.ErrorListener() {
             @Override
