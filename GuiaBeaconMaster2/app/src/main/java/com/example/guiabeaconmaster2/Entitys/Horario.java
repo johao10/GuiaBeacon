@@ -3,19 +3,16 @@ package com.example.guiabeaconmaster2.Entitys;
 import java.sql.Date;
 
 public class Horario {
-    //tbl_horario
     private int id_horario;
     private String cod_beacon;
     private String nombre_beacon;
-    //tbl_hora
     private String hora_inicio;
     private String hora_fin;
-    //tbl_curso
     private String nombre_curso;
-    //tbl_docente
     private String nombre_docente;
-    //tbl_ambiente
     private String imagen;
+
+
 
     public String getImagen() {
         return imagen;

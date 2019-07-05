@@ -8,4 +8,16 @@
     tools:context=".Activitys.DetalleHorario"
     tools:showIn="@layout/activity_detalle_horario">
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/idRecyclerHora"
+        android:layout_width="416dp"
+        android:layout_height="526dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 </android.support.constraint.ConstraintLayout>

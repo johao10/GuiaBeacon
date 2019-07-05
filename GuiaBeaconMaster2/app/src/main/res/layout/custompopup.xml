@@ -31,6 +31,7 @@
             android:layout_marginTop="15dp" />
 
         <TextView
+            android:id="@+id/txtubic2a"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -120,14 +121,5 @@
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btnfollow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="25dp"
-        android:text="Follow Me"
-        android:textColor="@color/white" />
 
 </LinearLayout>
