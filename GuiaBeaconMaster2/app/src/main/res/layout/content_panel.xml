@@ -7,7 +7,7 @@
     android:background="@color/colorBlanco"
     android:scrollbarThumbVertical="@color/colorGranada"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".PanelActivity"
+    tools:context=".Activitys.PanelActivity"
     tools:showIn="@layout/app_bar_panel">
 
     <LinearLayout
@@ -78,7 +78,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
                     android:background="@color/colorGranada"
-                    android:text="Laboratorios"
+                    android:text="Navegación"
                     android:textAlignment="center"
                     android:textColor="@color/colorBlanco"
                     android:textSize="20sp"
@@ -122,7 +122,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center_horizontal"
                     android:background="@color/colorGranada"
-                    android:text="Oscio"
+                    android:text="Laboratorios"
                     android:textAlignment="center"
                     android:textColor="@color/colorBlanco"
                     android:textSize="20sp"

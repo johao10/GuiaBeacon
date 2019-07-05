@@ -9,7 +9,7 @@
     android:scrollbarThumbVertical="@color/colorGranada"
     android:scrollbarTrackHorizontal="@color/colorBlanco"
     android:scrollbarTrackVertical="@color/colorBlanco"
-    tools:context=".Laboratorios">
+    tools:context=".Activitys.Laboratorios">
 
     <LinearLayout
         android:layout_width="match_parent"

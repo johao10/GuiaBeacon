@@ -5,7 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.guiabeaconmaster2.Login;
+import com.example.guiabeaconmaster2.Activitys.Login;
 import com.example.guiabeaconmaster2.R;
 
 public class SplashActivity extends AppCompatActivity {
