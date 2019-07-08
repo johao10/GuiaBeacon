@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
+import com.example.guiabeaconmaster2.Activitys.HorariosActivity;
+
 public class Laboratorios extends AppCompatActivity {
 
 
@@ -23,7 +25,7 @@ public class Laboratorios extends AppCompatActivity {
         sis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 = new Intent(Laboratorios.this,HorariosActivity.class);
+                Intent int1 = new Intent(Laboratorios.this, HorariosActivity.class);
                 Laboratorios.this.startActivity(int1);
             }
         });

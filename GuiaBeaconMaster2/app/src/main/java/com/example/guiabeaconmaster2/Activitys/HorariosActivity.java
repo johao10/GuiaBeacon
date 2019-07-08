@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Rect;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -45,6 +46,7 @@ import java.util.Collection;
 
 import com.example.guiabeaconmaster2.Entitys.Horario;
 import com.example.guiabeaconmaster2.R;
+import com.github.snowdream.android.widget.SmartImageView;
 import com.loopj.android.http.*;
 
 import cz.msebera.android.httpclient.Header;
@@ -57,7 +59,7 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
     EditText txtcod,txtnombre;
     Button btnbuscar;
     ListView lvDatos;
-    ImageView imagen;
+    SmartImageView Simageview;
 
     protected final String TAG = HorariosActivity.this.getClass().getSimpleName();;
     private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
@@ -85,12 +87,13 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
         txtnombre= findViewById(R.id.edtnombre);
         btnbuscar= findViewById(R.id.btnConsultar);
         lvDatos= findViewById(R.id.lvDatos);
-        imagen= findViewById(R.id.image);
+        Simageview= findViewById(R.id.image);
 
         btnbuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ObtenerDatos();
+                buscarimagen();
             }
         });
 
@@ -239,8 +242,35 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
 
     private void buscarimagen(){
 
+        String url="http://192.168.1.129/DBeacons/buscar2.php?nombre_beacon="+txtnombre.getText();
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get(url, new AsyncHttpResponseHandler() {
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] response) {
+                if (statusCode == 200) {
+                    try {
+                        JSONArray obj = new JSONArray(new String(response));
+                        String urlimage = obj.getJSONObject(0).getString("imagen_amb");
+                        Rect rect = new Rect(Simageview.getLeft(), Simageview.getTop(), Simageview.getRight(), Simageview.getBottom());
+                        Simageview.setImageUrl(urlimage, rect);
+                        Toast.makeText(getApplicationContext(), "Imagen: " + urlimage, Toast.LENGTH_LONG).show();
+                    } catch (Exception e) {
+                        Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+
+            }
+
+        });
 
     }
+
+
 
 
     private void buscarBeacon(final String guuid,final String guuid2){
@@ -252,6 +282,8 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
                     Toast.makeText(getApplicationContext(), "Beacon encontrado", Toast.LENGTH_SHORT).show();
                     txtcod.setText((guuid));
                     txtnombre.setText((guuid2));
+                    //ObtenerDatos();
+                    //buscarimagen();
             }
         }, new Response.ErrorListener() {
             @Override
