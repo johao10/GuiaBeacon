@@ -88,7 +88,7 @@ public class ListaLaboratorios extends AppCompatActivity implements   Response.L
     private void cargarWebService(){
 
 
-        String url="http://192.168.1.5/Beacons/consultalista.php";
+        String url="http://192.168.1.129/DBeacons/consultalista.php";
         jrq= new JsonObjectRequest(Request.Method.GET, url,null,this,this);
         rq.add(jrq);
 
