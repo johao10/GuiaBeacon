@@ -116,8 +116,8 @@ public class ListaLaboratorios extends AppCompatActivity implements   Response.L
                 horario.setId_horario(jsonObject.optInt("id_horario"));
                 horario.setCod_beacon(jsonObject.optString("cod_beacon"));
                 horario.setNombre_beacon(jsonObject.optString("nombre_beacon"));
-                horario.setNombre_curso(jsonObject.optString("nombre_curso"));
-                horario.setNombre_docente(jsonObject.optString("nombre_docente"));
+                //horario.setNombre_curso(jsonObject.optString("nombre_curso"));
+                //horario.setNombre_docente(jsonObject.optString("nombre_docente"));
 
 
 

@@ -61,7 +61,7 @@ public class DetalleHorario extends AppCompatActivity implements   Response.List
     }
 
     private void cargarwebservice(String d1) {
-        String url="http://192.168.1.5/Beacons/consultadetallelista.php?id_horario="+d1;
+        String url="http://192.168.1.129/DBeacons/consultadetallelista.php?id_horario="+d1;
         jrq= new JsonObjectRequest(Request.Method.GET, url,null,this,this);
         rq.add(jrq);
     }

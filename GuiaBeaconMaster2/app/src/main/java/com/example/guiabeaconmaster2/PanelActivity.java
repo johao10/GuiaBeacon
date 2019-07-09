@@ -34,7 +34,7 @@ public class PanelActivity extends AppCompatActivity
         osc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent int1 = new Intent(PanelActivity.this,Laboratorios.class);
+                Intent int1 = new Intent(PanelActivity.this,HorariosActivity.class);
                 PanelActivity.this.startActivity(int1);
             }
         });

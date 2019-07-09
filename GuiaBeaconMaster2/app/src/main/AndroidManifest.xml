@@ -26,8 +26,6 @@
         <activity android:name=".Ambrobotica" />
         <activity android:name=".Ambquimica" />
         <activity android:name=".Ambfisica" />
-        <activity android:name=".Activitys.Ambsistemas" />
-        <activity android:name=".Activitys.Laboratorios" />
         <activity
             android:name=".Laboratorio207"
             android:label="@string/title_activity_laboratorio207"
