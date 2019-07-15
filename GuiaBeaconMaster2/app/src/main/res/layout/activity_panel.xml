@@ -19,12 +19,12 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/colorGranada"
+        android:background="@drawable/mor2"
         android:scrollbarThumbHorizontal="@color/colorNegro"
         android:scrollbarThumbVertical="@color/colorNegro"
         app:headerLayout="@layout/nav_header_panel"
-        app:insetForeground="@color/colorGranada"
-        app:itemBackground="@color/colorBlanco"
+        app:insetForeground="@color/morado2"
+
         app:itemIconTint="@color/colorNegro"
         app:itemTextColor="@color/colorNegro"
         app:menu="@menu/activity_panel_drawer" />
