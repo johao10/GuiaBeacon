@@ -12,7 +12,18 @@ public class Horario {
     private String nombre_docente;
     private String imagen;
 
+    public Horario(){}
 
+    public Horario(int id_horario, String cod_beacon, String nombre_beacon, String hora_inicio, String hora_fin, String nombre_curso, String nombre_docente, String imagen) {
+        this.id_horario = id_horario;
+        this.cod_beacon = cod_beacon;
+        this.nombre_beacon = nombre_beacon;
+        this.hora_inicio = hora_inicio;
+        this.hora_fin = hora_fin;
+        this.nombre_curso = nombre_curso;
+        this.nombre_docente = nombre_docente;
+        this.imagen = imagen;
+    }
 
     public String getImagen() {
         return imagen;
@@ -22,7 +33,7 @@ public class Horario {
         this.imagen = imagen;
     }
 
-    public Horario(){}
+
 
     public String getHora_inicio() {
         return hora_inicio;

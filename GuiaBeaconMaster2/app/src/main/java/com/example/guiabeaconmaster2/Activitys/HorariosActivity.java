@@ -66,7 +66,7 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
     protected final String TAG = HorariosActivity.this.getClass().getSimpleName();;
     private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
     private static final int REQUEST_ENABLE_BLUETOOTH = 1;
-    private static final long DEFAULT_SCAN_PERIOD_MS = 12000;
+    private static final long DEFAULT_SCAN_PERIOD_MS = 3000;
     private static final String ALL_BEACONS_REGION = "AllBeaconsRegion";
     RequestQueue rq;
 
@@ -247,7 +247,6 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
                         Rect rect = new Rect(Simageview.getLeft(), Simageview.getTop(), Simageview.getRight(), Simageview.getBottom());
                         Simageview.setImageUrl(urlimage, rect);
                         txtnombre.setText(obj.getJSONObject(0).getString("nombre_beacon"));
-                        //Toast.makeText(getApplicationContext(), "Imagen: " + urlimage, Toast.LENGTH_LONG).show();
                     } catch (Exception e) {
                         Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
@@ -270,13 +269,12 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onResponse(JSONArray response) {
                 JSONObject jsonObject = null;
-                    Toast.makeText(getApplicationContext(), "Beacon encontrado", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Encontrado..", Toast.LENGTH_SHORT).show();
                     txtcod.setText((guuid));
                     txtdia.setText(obtenerFecha());
-
-                    ObtenerDatos();
+                    //lvDatos.setAdapter(null);
                     buscarimagen();
-
+                    ObtenerDatos();
             }
         }, new Response.ErrorListener() {
             @Override
@@ -296,13 +294,13 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void ObtenerDatos(){
-        //http://134.209.237.96/WebService/buscar.php?cod_beacon=134ea391-4fdf-48a3-bcbf-434f6b55311f&dia=Martes
         String url="http://134.209.237.96/WebService/buscar.php?cod_beacon="+txtcod.getText()+"&dia="+txtdia.getText();
         horario.post(url, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
 
                 if(statusCode == 200){
+
                     listar(new String (responseBody));
                 }
 
@@ -331,6 +329,7 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
             }
             ArrayAdapter<Horario> a = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,lista);
             lvDatos.setAdapter(a);
+
         }catch(Exception e){
             e.printStackTrace();
         }
