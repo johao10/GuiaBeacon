@@ -25,6 +25,7 @@
     <include
         layout="@layout/content_lista_laboratorios"
         android:layout_width="409dp"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="@drawable/sa" />
 
 </android.support.design.widget.CoordinatorLayout>

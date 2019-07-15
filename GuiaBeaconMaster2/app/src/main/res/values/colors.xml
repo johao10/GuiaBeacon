@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#0f97a1</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="white">#fff</color>
+    <color name="white">#FFFFFF</color>
     <color name="black">#FF0008</color>
 
     <color name="colorSplash">#000000</color>
@@ -22,7 +22,7 @@
     <color name="colorTransparente">#00000000</color>
     <color name="colorAmarillo">#fecd02</color>
     <color name="colorCeleste">#05AAF6</color>
-    <color name="colorRojo">#f44337</color>
+    <color name="colorRojo">#F44337</color>
     <color name="colorVerde">#29c96b</color>
     <color name="colorNaranja">#ff9802</color>
     <color name="colorLila">#cc35cc</color>
@@ -32,7 +32,7 @@
     <color name="colorTurquesa">#41bfbf</color>
     <color name="colorVinotinto">#89024c</color>
     <color name="colorFucsia">#ff028d</color>
-    <color name="colorAzulRey">#272e51</color>
+    <color name="colorAzulRey">#152161</color>
     <color name="colorTeja">#c35c04</color>
     <color name="colorVerdeAbeto">#0b7855</color>
     <color name="colorAzul">#0a3782</color>
