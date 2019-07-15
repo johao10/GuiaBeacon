@@ -83,11 +83,11 @@ public class DetalleHorario extends AppCompatActivity implements   Response.List
                 JSONObject jsonObject = null;
                 jsonObject= json.getJSONObject(i);
                 hora.setHora_inicio( jsonObject.optString("hora_inicio"));
-                hora.setHora_fin(jsonObject.optString("hora_inicio"));
+                hora.setHora_fin(jsonObject.optString("hora_fin"));
                 hora.setCodigo(jsonObject.optString("codigo"));
                 hora.setUbicacion(jsonObject.optString("ubicacion"));
-                hora.setCurso(jsonObject.optString("curso"));
-                hora.setDocente(jsonObject.optString("docente"));
+                hora.setCurso(jsonObject.optString("nombre_curso"));
+                hora.setDocente(jsonObject.optString("nombre_docente"));
 
                 listaHora.add(hora);
             }

@@ -22,7 +22,7 @@
         <android.support.v7.widget.CardView
             android:id="@+id/cardLabosis"
             android:layout_width="411dp"
-            android:layout_height="100dp"
+            android:layout_height="138dp"
             app:cardBackgroundColor="#00FFFFFF">
 
 
@@ -34,7 +34,7 @@
                 android:layout_marginLeft="75dp"
                 android:background="@drawable/fondo1"
                 android:paddingLeft="10dp"
-                android:text="Laboratorio Sistemas"
+                android:text=""
                 android:textColor="@color/colorNegro"
 
                 android:textSize="25sp"
@@ -46,23 +46,23 @@
                 android:id="@+id/txtHorai"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
                 android:layout_marginLeft="110dp"
-                android:textSize="15sp"
-                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:text="TextView"
                 android:textColor="@color/colorNegro"
-                android:text="TextView" />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtHoraf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
                 android:layout_marginLeft="110dp"
-                android:textSize="15sp"
-                android:textStyle="bold"
+                android:layout_marginTop="70dp"
+                android:text="TextView"
                 android:textColor="@color/colorNegro"
-                android:text="TextView" />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtHorai2"
@@ -82,34 +82,34 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="70dp"
-                android:textSize="15sp"
-                android:textStyle="bold"
+                android:text="Hora Fin"
                 android:textColor="@color/colorNegro"
+                android:textSize="15sp"
 
-                android:text="Hora Fin" />
+                android:textStyle="bold" />
 
 
             <TextView
                 android:id="@+id/txtDoc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
                 android:layout_marginLeft="300dp"
-                android:textSize="15sp"
-                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:text="TextView"
                 android:textColor="@color/colorNegro"
-                android:text="TextView" />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtCod"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
                 android:layout_marginLeft="300dp"
-                android:textSize="15sp"
-                android:textStyle="bold"
+                android:layout_marginTop="70dp"
+                android:text="TextView"
                 android:textColor="@color/colorNegro"
-                android:text="TextView" />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtCod2"
@@ -117,11 +117,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="240dp"
                 android:layout_marginTop="50dp"
-                android:textSize="15sp"
-                android:textStyle="bold"
+                android:text="Docente"
                 android:textColor="@color/colorNegro"
+                android:textSize="15sp"
 
-                android:text="Docente" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtDoc2"
@@ -129,16 +129,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="240dp"
                 android:layout_marginTop="70dp"
-                android:textSize="15sp"
-                android:textStyle="bold"
+                android:text="Código"
                 android:textColor="@color/colorNegro"
+                android:textSize="15sp"
 
-                android:text="Código" />
-
-
-
-
-
+                android:textStyle="bold" />
 
 
         </android.support.v7.widget.CardView>

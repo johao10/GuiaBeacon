@@ -41,8 +41,10 @@ import org.altbeacon.beacon.Region;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 
 import com.example.guiabeaconmaster2.Entitys.Horario;
 import com.example.guiabeaconmaster2.R;
@@ -56,7 +58,7 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
         RangeNotifier{
 
     private AsyncHttpClient horario;
-    EditText txtcod,txtnombre;
+    EditText txtcod,txtnombre,txtdia;
     Button btnbuscar;
     ListView lvDatos;
     SmartImageView Simageview;
@@ -85,18 +87,9 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
 
         txtcod= findViewById(R.id.edtCodbeacon);
         txtnombre= findViewById(R.id.edtnombre);
-        btnbuscar= findViewById(R.id.btnConsultar);
+        txtdia = findViewById(R.id.edtdia);
         lvDatos= findViewById(R.id.lvDatos);
         Simageview= findViewById(R.id.image);
-
-        btnbuscar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ObtenerDatos();
-                buscarimagen();
-            }
-        });
-
 
         getStartButton().setOnClickListener(this);
         getStopButton().setOnClickListener(this);
@@ -112,7 +105,6 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
         mRegion = new Region(ALL_BEACONS_REGION, identifiers);
 
         //Button btnBuscar = (Button) findViewById(R.id.startReadingBeaconsButton);
-
     }
 
     @Override
@@ -235,14 +227,14 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
         }
         for (Beacon beacon : beacons) {
             String guuid = String.valueOf(beacon.getId1());
-            String guuid2 = String.valueOf(beacon.getId2());
-            buscarBeacon(guuid,guuid2);
+            //String guuid2 = String.valueOf(beacon.getId2());
+            buscarBeacon(guuid);
         }
     }
 
     private void buscarimagen(){
 
-        String url="http://134.209.237.96/WebService/buscar2.php?nombre_beacon="+txtnombre.getText();
+        String url="http://134.209.237.96/WebService/buscar2.php?cod_beacon="+txtcod.getText();
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(url, new AsyncHttpResponseHandler() {
 
@@ -271,7 +263,7 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
     }
 
 
-    private void buscarBeacon(final String guuid,final String guuid2){
+    private void buscarBeacon(final String guuid){
         String url="http://134.209.237.96/WebService/identificar.php?beacon="+guuid;
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
             @Override
@@ -279,7 +271,10 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
                 JSONObject jsonObject = null;
                     Toast.makeText(getApplicationContext(), "Beacon encontrado", Toast.LENGTH_SHORT).show();
                     txtcod.setText((guuid));
-                    txtnombre.setText((guuid2));
+                    txtdia.setText(obtenerFecha());
+                    ObtenerDatos();
+                    buscarimagen();
+
             }
         }, new Response.ErrorListener() {
             @Override
@@ -291,9 +286,15 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
         rq = Volley.newRequestQueue(this);
         rq.add(jsonArrayRequest);
     }
+    private String obtenerFecha(){
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+        Date d = new Date();
+        String dayOfTheWeek = sdf.format(d);
+        return dayOfTheWeek;
+    }
 
     private void ObtenerDatos(){
-        String url="http://134.209.237.96/WebService/buscar.php?nombre_beacon="+txtnombre.getText();
+        String url="http://134.209.237.96/WebService/buscar.php?cod_beacon="+txtcod.getText();
         horario.post(url, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -327,6 +328,7 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
             }
             ArrayAdapter<Horario> a = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,lista);
             lvDatos.setAdapter(a);
+            txtnombre.setText(jsonarreglo.getJSONObject(0).getString("nombre_beacon"));
         }catch(Exception e){
             e.printStackTrace();
         }
