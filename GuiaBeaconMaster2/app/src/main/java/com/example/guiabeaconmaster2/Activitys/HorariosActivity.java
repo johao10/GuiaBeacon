@@ -246,7 +246,8 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
                         String urlimage = obj.getJSONObject(0).getString("imagen");
                         Rect rect = new Rect(Simageview.getLeft(), Simageview.getTop(), Simageview.getRight(), Simageview.getBottom());
                         Simageview.setImageUrl(urlimage, rect);
-                        Toast.makeText(getApplicationContext(), "Imagen: " + urlimage, Toast.LENGTH_LONG).show();
+                        txtnombre.setText(obj.getJSONObject(0).getString("nombre_beacon"));
+                        //Toast.makeText(getApplicationContext(), "Imagen: " + urlimage, Toast.LENGTH_LONG).show();
                     } catch (Exception e) {
                         Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
@@ -272,6 +273,7 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
                     Toast.makeText(getApplicationContext(), "Beacon encontrado", Toast.LENGTH_SHORT).show();
                     txtcod.setText((guuid));
                     txtdia.setText(obtenerFecha());
+
                     ObtenerDatos();
                     buscarimagen();
 
@@ -329,7 +331,6 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
             }
             ArrayAdapter<Horario> a = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,lista);
             lvDatos.setAdapter(a);
-            txtnombre.setText(jsonarreglo.getJSONObject(0).getString("nombre_beacon"));
         }catch(Exception e){
             e.printStackTrace();
         }
