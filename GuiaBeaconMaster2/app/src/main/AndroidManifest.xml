@@ -8,8 +8,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/utp7"
-        android:label="CAMPUS UTP"
+        android:icon="@drawable/logooficial3"
+        android:label="UTP CAMPUS"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
