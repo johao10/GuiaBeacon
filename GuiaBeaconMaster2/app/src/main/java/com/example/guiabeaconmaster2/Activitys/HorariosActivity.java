@@ -294,7 +294,8 @@ public class HorariosActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void ObtenerDatos(){
-        String url="http://134.209.237.96/WebService/buscar.php?cod_beacon="+txtcod.getText();
+        //http://134.209.237.96/WebService/buscar.php?cod_beacon=134ea391-4fdf-48a3-bcbf-434f6b55311f&dia=Martes
+        String url="http://134.209.237.96/WebService/buscar.php?cod_beacon="+txtcod.getText()+"&dia="+txtdia.getText();
         horario.post(url, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
