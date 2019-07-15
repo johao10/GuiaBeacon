@@ -6,6 +6,26 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#FF0008</color>
 
+    <color name="morado">#6200EA</color>
+    <color name="morado2">#B39DDB</color>
+    <color name="morado3">#D1C4E9</color>
+    <color name="morado4">#E1BEE7</color>
+
+    <color name="Mor1">#EC407A</color>
+    <color name="Mor2">#F06292</color>
+    <color name="Mor3">#F48fb1</color>
+
+    <color name="Map1">#F44336</color>
+
+    <color name="Amariillo1">#F9A825</color>
+    <color name="Amariillo2">#FBC02D</color>
+    <color name="Amariillo3">#FDD835</color>
+
+    <color name="Azul1">#0277BD</color>
+    <color name="Azul2">#0091EA</color>
+    <color name="Azul3">#00BCD4</color>
+
+
     <color name="colorSplash">#000000</color>
     <color name="colorFondo">#3A3838</color>
     <color name="colorIntroduccion">#871616</color>
