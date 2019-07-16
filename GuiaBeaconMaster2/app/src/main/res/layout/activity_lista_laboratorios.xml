@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/colorBlanco"
-
+    android:background="@color/Sis5"
     android:layout_height="match_parent"
+    android:foregroundGravity="center"
     tools:context=".Activitys.ListaLaboratorios">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
     <android.support.design.widget.AppBarLayout
-    android:layout_width="match_parent"
-    android:layout_height="40dp"
-    android:background="@color/colorGranada">
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/Sis0">
 
         <TextView
             android:layout_width="match_parent"
@@ -25,6 +33,12 @@
     <include
         layout="@layout/content_lista_laboratorios"
         android:layout_width="409dp"
-        android:layout_height="match_parent" />
+        android:layout_height="566dp"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center"/>
 
-</android.support.design.widget.CoordinatorLayout>
+        </LinearLayout>
+
+
+
+</ScrollView>

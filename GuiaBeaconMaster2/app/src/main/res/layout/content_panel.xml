@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/morado4"
-    android:scrollbarThumbVertical="@color/colorGranada"
+    android:background="@drawable/mor3"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Activitys.PanelActivity"
     tools:showIn="@layout/app_bar_panel">
@@ -17,295 +16,306 @@
         android:weightSum="10">
 
     <LinearLayout
-        android:id="@+id/idLayoutFondo"
+        android:id="@+id/idLayoutGhg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-20dp">
 
         <ImageView
-            android:id="@+id/imagenId"
-            android:layout_width="wrap_content"
-            android:scaleType="fitCenter"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/campus" />
+            android:background="@drawable/foto22"/>
 
     </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/idLayoutFondo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            tools:visibility="invisible">
 
-    <android.support.v7.widget.GridLayout
-        android:id="@+id/idGridLab"
-        android:layout_width="match_parent"
-        android:layout_height="495dp"
-        android:layout_marginTop="-60dp"
-        android:clickable="true"
-        android:background="@drawable/mor1"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:padding="4dp"
-        app:columnCount="2"
-        app:rowCount="3">
+            <ImageView
+                android:id="@+id/imagenId"
+                android:layout_width="wrap_content"
+                android:layout_height="62dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter"
+                tools:visibility="invisible" />
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardLab"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp"
-            android:foreground="?selectableItemBackground"
-            app:cardBackgroundColor="@color/colorTransparente"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="6dp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/fondo1"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="75dp"
-                    android:scaleType="fitEnd"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/nav" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@color/morado2"
-                    android:text="Navegación"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorNegro"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
+        </LinearLayout>
 
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardOscio"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp"
-            android:foreground="?selectableItemBackground"
-            app:cardBackgroundColor="@color/colorTransparente"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="6dp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
+        <android.support.v7.widget.GridLayout
+            android:id="@+id/idGridLab"
+            android:layout_width="match_parent"
+            android:layout_height="495dp"
+            android:layout_marginTop="-60dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="4dp"
+            app:columnCount="2"
+            app:rowCount="3">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardLab"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:foreground="?selectableItemBackground"
+                app:cardBackgroundColor="@color/colorTransparente"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="6dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="75dp"
-                    android:scaleType="fitEnd"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/universidad" />
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fondo1"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@color/morado2"
-                    android:text="Laboratorios"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorNegro"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="75dp"
+                        android:scaleType="fitEnd"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/nav" />
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Navegacion"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorNegro"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-        </android.support.v7.widget.CardView>
+                </LinearLayout>
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardActividades"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp"
-            android:foreground="?selectableItemBackground"
-            app:cardBackgroundColor="@color/colorTransparente"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="6dp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="center_horizontal"
-                    android:scaleType="fitEnd"
-                    android:src="@drawable/servicouni" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@color/morado3"
-                    android:text="Actividades"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorNegro"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-        </android.support.v7.widget.CardView>
+            </android.support.v7.widget.CardView>
 
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardOtros"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp"
-            android:foreground="?selectableItemBackground"
-            app:cardBackgroundColor="@color/colorTransparente"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="6dp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardOscio"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:foreground="?selectableItemBackground"
+                app:cardBackgroundColor="@color/colorTransparente"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="6dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/fondo1"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fondo1"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="75dp"
-                    android:scaleType="fitEnd"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/salestu" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="75dp"
+                        android:scaleType="fitEnd"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/universidad" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_centerHorizontal="true"
-                    android:background="@color/morado3"
-                    android:text="Otros"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorNegro"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Laboratorios"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorNegro"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-            </LinearLayout>
+                </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+            </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardCafetin"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp"
-            android:foreground="?selectableItemBackground"
-            app:cardBackgroundColor="@color/colorTransparente"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="6dp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardActividades"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:foreground="?selectableItemBackground"
+                app:cardBackgroundColor="@color/colorTransparente"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="6dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/fondo1"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fondo1"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="75dp"
-                    android:scaleType="fitEnd"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/cafetin" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/servicouni" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_centerHorizontal="true"
-                    android:background="@color/morado2"
-                    android:text="Cafetin"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorNegro"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
 
-            </LinearLayout>
+                        android:text="Actividades"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorNegro"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardEstacionamiento"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="10dp"
-            android:foreground="?selectableItemBackground"
-            app:cardBackgroundColor="@color/colorTransparente"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="6dp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
+                </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/fondo1"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
+            </android.support.v7.widget.CardView>
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="center_horizontal"
-                    android:scaleType="fitEnd"
-                    android:src="@drawable/estac" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_centerHorizontal="true"
-                    android:background="@color/morado2"
-                    android:text="Estacionamiento"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorNegro"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardOtros"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:foreground="?selectableItemBackground"
+                app:cardBackgroundColor="@color/colorTransparente"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="6dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
 
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fondo1"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
 
-        </android.support.v7.widget.CardView>
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="75dp"
+                        android:scaleType="fitEnd"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/salestu" />
 
-    </android.support.v7.widget.GridLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:text="Otros"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorNegro"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardCafetin"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:foreground="?selectableItemBackground"
+                app:cardBackgroundColor="@color/colorTransparente"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="6dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fondo1"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="75dp"
+                        android:scaleType="fitEnd"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/cafetin" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:text="Cafetin"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorNegro"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardEstacionamiento"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:foreground="?selectableItemBackground"
+                app:cardBackgroundColor="@color/colorTransparente"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="6dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fondo1"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/estac" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:text="Parking"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorNegro"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </android.support.v7.widget.GridLayout>
 
     </LinearLayout>
 
