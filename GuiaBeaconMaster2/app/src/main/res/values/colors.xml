@@ -8,8 +8,9 @@
 
     <color name="morado">#6200EA</color>
     <color name="morado2">#B39DDB</color>
-    <color name="morado3">#D1C4E9</color>
-    <color name="morado4">#E1BEE7</color>
+    <color name="morado3">#E040FB</color>
+    <color name="morado4">#EA80FC</color>
+    <color name="morado5">#9C27B0</color>
 
     <color name="Mor1">#EC407A</color>
     <color name="Mor2">#F06292</color>
@@ -20,9 +21,36 @@
     <color name="Amariillo1">#F9A825</color>
     <color name="Amariillo2">#FBC02D</color>
     <color name="Amariillo3">#FDD835</color>
+    <color name="Amariillo4">#FFE082</color>
+    <color name="Amariillo5">#FFECB3</color>
+    <color name="Amariillo6">#FF6f00</color>
+    <color name="Amariillo7">#FBC02D</color>
+    <color name="Amariillo8">#FFFF00</color>
 
-    <color name="Azul1">#0277BD</color>
-    <color name="Azul2">#0091EA</color>
+    <color name="Verde1">#4CAF50</color>
+    <color name="Verde2">#00E676</color>
+    <color name="Verde3">#00C853</color>
+    <color name="Verde4">#69F0AE</color>
+
+
+    <color name="Sis0">#9E9D24</color>
+    <color name="Sis1">#AEEA00</color>
+    <color name="Sis2">#C6FF00</color>
+    <color name="Sis3">#EEFF41</color>
+    <color name="Sis4">#F4FF81</color>
+    <color name="Sis5">#F0F4C3</color>
+    <color name="Sis6">#FF8F00</color>
+
+    <color name="Horario1">#00B8D4</color>
+    <color name="Horario2">#00E5FF</color>
+    <color name="Horario3">#18FFFF</color>
+    <color name="Horario4">#B2EBF2</color>
+
+    <color name="Cafe1">#795548</color>
+
+
+    <color name="Azul1">#0D47A1</color>
+    <color name="Azul2">#1976D2</color>
     <color name="Azul3">#00BCD4</color>
 
 
