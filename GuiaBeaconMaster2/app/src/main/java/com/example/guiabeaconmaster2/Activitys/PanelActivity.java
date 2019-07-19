@@ -1,5 +1,4 @@
 package com.example.guiabeaconmaster2.Activitys;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -15,13 +14,35 @@ import android.view.View;
 
 import com.example.guiabeaconmaster2.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import ahmed.easyslider.EasySlider;
+import ahmed.easyslider.SliderItem;
+
 public class PanelActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+        
+        
+
+    EasySlider easySlider;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panel);
+        
+        easySlider=findViewById(R.id.sliderId);
+
+        List<SliderItem> easySliders=new ArrayList<>();
+
+        easySliders.add(new SliderItem("",R.drawable.foto22));
+        easySliders.add(new SliderItem("",R.drawable.azumi));
+        easySliders.add(new SliderItem("",R.drawable.gestion));
+
+        easySlider.setPages(easySliders);
+
 
         CardView labo = (CardView) findViewById(R.id.cardLab);
         CardView act = (CardView) findViewById(R.id.cardActividades);
