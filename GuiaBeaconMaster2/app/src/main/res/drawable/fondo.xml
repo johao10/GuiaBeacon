@@ -4,10 +4,11 @@
     <item android:state_pressed="true">
         <shape >
             <corners android:radius="10dp" />
+            <stroke android:width="3dp" android:color="@color/white"/>
             <gradient
                 android:angle="135"
                 android:centerColor="@color/colorGranada"
-                android:endColor="#FFFFFF"
+                android:endColor="#AE0101"
                 android:startColor="@color/colorGranada"
                 android:type="linear" />
 
