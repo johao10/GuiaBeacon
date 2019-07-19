@@ -19,14 +19,14 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@drawable/mor4"
+        android:background="@drawable/azulima1"
         android:scrollbarThumbHorizontal="@color/colorNegro"
         android:scrollbarThumbVertical="@color/colorNegro"
         app:headerLayout="@layout/nav_header_panel"
-        app:insetForeground="@color/morado2"
+        app:insetForeground="@color/Azul2"
 
         app:itemIconTint="@color/colorNegro"
-        app:itemTextColor="@color/colorNegro"
+        app:itemTextColor="@color/white"
         app:menu="@menu/activity_panel_drawer" />
 
 </android.support.v4.widget.DrawerLayout>

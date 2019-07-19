@@ -35,8 +35,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="15dp"
-            android:background="@drawable/button_inicio"
-            android:drawableLeft="@drawable/ic_mail"
+            android:background="@drawable/side_nav_nar3"
+            android:drawableLeft="@drawable/ic_action_correo2"
             android:drawablePadding="10dp"
             android:hint="Correo electrónico"
             android:inputType="textEmailAddress"
@@ -44,8 +44,8 @@
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
-            android:textColor="@color/colorNegro"
-            android:textColorHint="@color/colorNegro" />
+            android:textColor="@color/colorBlanco"
+            android:textColorHint="@color/white" />
 
         <EditText
             android:id="@+id/txtPwd"
@@ -54,8 +54,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/button_inicio"
-            android:drawableLeft="@drawable/ic_pass"
+            android:background="@drawable/side_nav_nar3"
+            android:drawableLeft="@drawable/ic_pasword2"
             android:drawablePadding="10dp"
             android:hint="Contraseña"
             android:inputType="textPassword"
@@ -63,8 +63,8 @@
             android:paddingTop="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
-            android:textColor="@color/colorNegro"
-            android:textColorHint="@color/colorNegro" />
+            android:textColor="@color/colorBlanco"
+            android:textColorHint="@color/white" />
 
         <TextView
             android:id="@+id/restPassword"
