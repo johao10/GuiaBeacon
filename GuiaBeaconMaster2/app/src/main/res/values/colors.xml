@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#0f97a1</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="white">#fff</color>
+    <color name="white">#FFFFFF</color>
     <color name="black">#FF0008</color>
 
     <color name="morado">#6200EA</color>
@@ -11,6 +11,9 @@
     <color name="morado3">#E040FB</color>
     <color name="morado4">#EA80FC</color>
     <color name="morado5">#9C27B0</color>
+    <color name="morado6">#E1BEE7</color>
+    <color name="morado7">#F3E5F5</color>
+    <color name="morado8">#CE93D8</color>
 
     <color name="Mor1">#EC407A</color>
     <color name="Mor2">#F06292</color>
@@ -51,7 +54,7 @@
 
     <color name="Azul1">#0D47A1</color>
     <color name="Azul2">#1976D2</color>
-    <color name="Azul3">#00BCD4</color>
+    <color name="Azul3">#2962FF</color>
 
 
     <color name="colorSplash">#000000</color>
@@ -76,7 +79,7 @@
     <color name="colorLila">#cc35cc</color>
     <color name="colorMarron">#894802</color>
     <color name="colorLima">#81c10a</color>
-    <color name="colorGranada">#ae0101</color>
+    <color name="colorGranada">#AE0101</color>
     <color name="colorTurquesa">#41bfbf</color>
     <color name="colorVinotinto">#89024c</color>
     <color name="colorFucsia">#ff028d</color>
